@@ -5,6 +5,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  void answerQuestion() {
+    print('Answer choosen');
+  }
+
   const MyApp({super.key});
 
   @override
@@ -16,22 +20,22 @@ class MyApp extends StatelessWidget {
           title: const Text('My First APP'),
         ),
         body: Column(
-          children: const [
+          children: [
             Text('The question!'),
             ElevatedButton(
-              onPressed: null,
+              onPressed: answerQuestion,
               child: Text('Answer 1'),
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: answerQuestion,
               child: Text('Answer 2'),
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: answerQuestion,
               child: Text('Answer 3'),
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: answerQuestion,
               child: Text('Answer 4'),
             ),
           ],
