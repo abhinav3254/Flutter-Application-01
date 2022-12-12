@@ -16,7 +16,10 @@ class MyAppState extends State<MyApp> {
   int index = 0;
 
   void answerQuestion() {
-    index = index + 1;
+    setState(() {
+      index = index + 1;
+    });
+
     print(index);
   }
 
