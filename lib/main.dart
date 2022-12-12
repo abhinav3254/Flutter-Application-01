@@ -4,7 +4,15 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+    // note here createState method returns the State
+  }
+}
+
+class MyAppState extends State<MyApp> {
   int index = 0;
 
   void answerQuestion() {
