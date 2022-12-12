@@ -13,14 +13,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int index = 0;
+  int _index = 0;
 
   void answerQuestion() {
     setState(() {
-      index = index + 1;
+      _index = _index + 1;
     });
 
-    print(index);
+    print(_index);
   }
 
   // const MyApp({super.key});
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions[index]),
+            Text(questions[_index]),
             ElevatedButton(
               onPressed: (answerQuestion),
               child: Text('Answer 1'),
