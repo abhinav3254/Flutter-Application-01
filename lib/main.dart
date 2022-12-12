@@ -50,11 +50,13 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questions[_index]),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
-            Answer(_answerQuestion),
+            Question(
+              questions[_index]['questionText'].toString(),
+            ),
+            // ... is spread operator what it does is it takes a list and they pull all the values in the list out of it and it add them to the surronding list as the indivual lists
+            ...(questions[_index]['answers'] as List<String>).map((answer) {
+              return Answer(_answerQuestion, answer);
+            }).toList()
           ],
         ),
       ),
